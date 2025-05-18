@@ -100,6 +100,7 @@ If you have questions, suggestions, or want to contribute, feel free to reach ou
 
 ### 📖 Citation
 If you use or adapt this code for a publication, please cite appropriately or credit this GitHub repository.
+Morawo, I. (2025). vortex-detection: Tools for identifying and visualizing disclinations in 2D liquid crystal flows (Version 1.0) [Software]. https://github.com/yourusername/vortex-detection
 
 ---
 
