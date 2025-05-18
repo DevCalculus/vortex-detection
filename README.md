@@ -98,6 +98,14 @@ If you have questions, suggestions, or want to contribute, feel free to reach ou
 
 ---
 
+
+### 📚 References
+
+1. Giomi, L., Bowick, M. J., Ma, X., & Marchetti, M. C. (2013). *Defect annihilation and proliferation in active nematics*. Physical Review Letters, 110(22), 228101. https://doi.org/10.1103/PhysRevLett.110.228101
+
+2. Thampi, S. P., Golestanian, R., & Yeomans, J. M. (2014). *Vorticity, defects and correlations in active turbulence*. Philosophical Transactions of the Royal Society A, 372(2029), 20130366. https://doi.org/10.1098/rsta.2013.0366
+
+
 ### 📖 Citation
 If you use or adapt this code for a publication, please cite appropriately or credit this GitHub repository.
 Morawo, I. (2025). vortex-detection: Tools for identifying and visualizing disclinations in 2D liquid crystal flows (Version 1.0) [Software]. https://github.com/DevCalculus/vortex-detection
