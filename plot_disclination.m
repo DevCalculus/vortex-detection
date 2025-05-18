@@ -1,11 +1,11 @@
 % === Step 1: Load velocity data ===
 data = load('active_nematic_velocity_700.dat');
-x = data(:,1) + 1;  % MATLAB indexing
+x = data(:,1) + 1;  
 y = data(:,2) + 1;
 ux = data(:,4);
 uy = data(:,5);
 
-N = 51;
+N = 51; %depending on the number points
 U = zeros(N,N); 
 V = zeros(N,N);
 for k = 1:length(x)
@@ -15,7 +15,7 @@ end
 
 [X, Y] = meshgrid(1:N, 1:N);
 
-% === Step 2: Compute Q field (your definition) ===
+% === Step 2: Compute Okubo-Weiss field
 [dux_dx, dux_dy] = gradient(U);
 [duy_dx, ~] = gradient(V);
 Q = dux_dx.^2 + duy_dx .* dux_dy;
@@ -47,11 +47,11 @@ for i = 2:N-1
     end
 end
 
-% === Step 4: Plot streamlines and disclinations ===
+
 % === Step 4: Plot streamlines and disclinations ===
 figure; hold on;
 
-% Plot streamlines (light gray)
+% Plot streamlines
 h_stream = streamslice(X, Y, U, V, 2);
 set(h_stream, 'Color', [0.6 0.6 0.6]);
 
@@ -63,7 +63,7 @@ xlabel('x'); ylabel('y');
 axis equal tight;
 title('Streamlines and Disclinations at t = 1000');
 
-% === Improved Legend with symbols ===
+% === Improved Legend
 h1 = plot(NaN, NaN, 'ro', 'MarkerFaceColor', 'r', 'MarkerSize', 6);   % dummy +1/2
 h2 = plot(NaN, NaN, 'bo', 'MarkerFaceColor', 'b', 'MarkerSize', 6);   % dummy -1/2
 h3 = plot(NaN, NaN, '-', 'Color', [0.6 0.6 0.6]);                      % dummy streamline
