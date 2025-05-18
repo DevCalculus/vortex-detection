@@ -8,7 +8,7 @@ A collection of vortex detection and visualization tools for 2D velocity fields 
 
 Liquid crystals, particularly active nematics, often exhibit topological defects and complex vortex dynamics. This repository provides tools for:
 
-- Computing the Q-field (from gradients of the velocity field)
+- Computing the Okubo-Weiss field (from gradients of the velocity field)
 - Detecting disclinations using angular winding methods
 - Visualizing velocity streamlines and disclination positions
 - Saving high-resolution plots for presentation or publication
