@@ -15,12 +15,12 @@ end
 
 [X, Y] = meshgrid(1:N, 1:N);
 
-% === Step 2: Compute Okubo-Weiss field
+% === Step 2: Try to Compute Okubo-Weiss field
 [dux_dx, dux_dy] = gradient(U);
 [duy_dx, ~] = gradient(V);
 Q = dux_dx.^2 + duy_dx .* dux_dy;
 
-% === Step 3: Detect disclination cores using angle winding ===
+% === Step 3: Try to Detect disclination cores using angle winding ===
 angle_diff = @(a1, a2) atan2(sin(a2 - a1), cos(a2 - a1));
 plus_half = [];
 minus_half = [];
@@ -48,7 +48,7 @@ for i = 2:N-1
 end
 
 
-% === Step 4: Plot streamlines and disclinations ===
+% === Step 4: Try to Plot streamlines and disclinations ===
 figure; hold on;
 
 % Plot streamlines
@@ -70,3 +70,4 @@ h3 = plot(NaN, NaN, '-', 'Color', [0.6 0.6 0.6]);                      % dummy s
 
 legend([h3, h1, h2], {'Streamlines', '+1/2 disclination', '−1/2 disclination'}, ...
        'Location', 'northeastoutside');
+
